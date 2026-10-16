@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Órbita — Estúdio de software</title>
+  <meta name="description" content="Produtos digitais sob medida para empresas que crescem rápido.">
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; background: #0b0c10; color: #e8e8ea; }
+    section { padding: 120px 6vw; }
+    h2 { font-size: 2.6rem; margin: 0 0 1rem; }
+    .btn { display: inline-block; padding: .8rem 1.4rem; border-radius: 999px; background: #6c5ce7; color: #fff; text-decoration: none; }
+    .card { padding: 1.5rem; border: 1px solid #222; border-radius: 12px; }
+    .grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <!-- Simula um bundle de SPA: o conteúdo só existe depois do JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        document.getElementById('root').innerHTML = `
+          <main>
+            <section><h2>Software que acompanha o seu ritmo.</h2><p>Times pequenos, entregas semanais e métricas claras desde o primeiro dia.</p><a class="btn" href="#contato">Falar com a gente</a></section>
+            <section><h2>O que fazemos</h2><div class="grade"><div class="card"><h3>Produto</h3><p>Descoberta, protótipo e lançamento em ciclos curtos.</p></div><div class="card"><h3>Engenharia</h3><p>Aplicações web e mobile com testes automatizados.</p></div><div class="card"><h3>Dados</h3><p>Painéis e automações que respondem perguntas reais.</p></div></div></section>
+            <section id="contato"><h2>Vamos conversar</h2><p>Conte o problema; respondemos com um plano em até três dias.</p><button class="btn" type="submit">Enviar</button></section>
+          </main>`;
+      }, 300);
+    });
+  </script>
+</body>
+</html>

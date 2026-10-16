@@ -1,0 +1,15 @@
+node_modules/
+npm-debug.log*
+
+# Material de referência pago (os PDFs de prompts) não vai para o repositório público
+*.pdf
+
+# Saídas locais do MCP (backups, verificações, capturas, configs de porta)
+.imersao/
+*.bak
+
+# Sistema / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

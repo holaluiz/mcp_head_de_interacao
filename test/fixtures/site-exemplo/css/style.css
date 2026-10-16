@@ -1,0 +1,35 @@
+:root { --primary: #e8452c; --ink: #141414; }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: #ffffff; color: #141414; font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+h1, h2, h3 { font-family: 'Archivo', sans-serif; line-height: 1.1; }
+h1 { font-size: clamp(2.4rem, 6vw, 4.6rem); margin: 0 0 1rem; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+.topo { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 16px 5vw; background: rgba(255, 255, 255, 0.92); border-bottom: 1px solid #eee; }
+.topo nav { display: flex; gap: 1.4rem; align-items: center; }
+.topo a { color: #141414; text-decoration: none; }
+.logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; }
+.logo img { width: 28px; height: 28px; }
+.btn { display: inline-block; background: var(--primary); color: #fff !important; padding: 0.8rem 1.4rem; border-radius: 999px; text-decoration: none; border: 0; font: inherit; cursor: pointer; }
+.btn-pequeno { padding: 0.45rem 1rem; }
+section { padding: 96px 5vw; }
+.hero { display: grid; grid-template-columns: 1fr 1fr; gap: 4vw; align-items: center; min-height: 80vh; background: #f6f4f1; }
+.hero-img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; background: #222; }
+.intro { color: #555; }
+.grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 2rem; }
+.card { background: #fff; border: 1px solid #eee; border-radius: 12px; overflow: hidden; padding-bottom: 1rem; }
+.card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: #ddd; }
+.card h3, .card p { padding: 0 1.2rem; }
+.numeros { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: center; background: #141414; color: #fff; }
+.numero strong { display: block; font-family: 'Archivo', sans-serif; font-size: 3.4rem; color: var(--primary); }
+.depoimentos .lista { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+blockquote { margin: 0; padding: 1.5rem; border-left: 3px solid var(--primary); background: #faf9f7; }
+cite { display: block; margin-top: 0.6rem; color: #777; font-style: normal; }
+form { display: grid; gap: 1rem; max-width: 520px; }
+label { display: grid; gap: 0.3rem; }
+input { padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px; font: inherit; }
+footer { padding: 40px 5vw; background: #0d0d0d; color: #bbb; }
+@media (max-width: 760px) {
+  .hero, .grade, .numeros, .depoimentos .lista { grid-template-columns: 1fr; }
+  .topo nav a:not(.btn) { display: none; }
+}
