@@ -82,7 +82,8 @@ const CLIENTES = {
 
 const tomlStr = (s) => JSON.stringify(s);
 function blocoToml() {
-  return `[mcp_servers.${NOME}]\ncommand = ${tomlStr(cmd.command)}\nargs = [${cmd.args.map(tomlStr).join(', ')}]\nstartup_timeout_sec = 60\ntool_timeout_sec = 900\n`;
+  // Via npx a primeira execução instala o pacote (~1 min): dá folga ao início.
+  return `[mcp_servers.${NOME}]\ncommand = ${tomlStr(cmd.command)}\nargs = [${cmd.args.map(tomlStr).join(', ')}]\nstartup_timeout_sec = ${usarNpx ? 120 : 60}\ntool_timeout_sec = 900\n`;
 }
 const quote = (a) => (/\s/.test(a) ? `"${a}"` : a);
 
